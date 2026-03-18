@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Page_JavaScript</title>
+    <style>
+        body {
+            font-family: 宋体;
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: rgb(67, 198, 115);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        content {
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"] {
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: rgb(67, 198, 115);
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(50, 150, 90);
+        }
+
+        .result {
+            margin: 20px;
+            padding: 20px;
+            background-color: rgb(169, 217, 252);
+            border-left: 5px solid rgb(67, 198, 115);
+            border-right: 5px solid rgb(67, 198, 115);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        p {
+            font-family: verdana;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--标题区-->
+    <div class="header">
+        <h1>欢迎来到我的页面</h1>
+    </div>
+
+    <!--内容区-->
+    <div class="content">
+        <input type="text" id="nameInput" placeholder="请输入你的名字">
+        <button onclick="welcome()">确认</button>
+        <button onclick="changeColor()">变色</button>
+        <button onclick="hide()">隐藏</button>
+        <button onclick="show()">显示</button>
+    </div>
+
+    <!--结果展示区-->
+    <div id="ResultArea" class="result"></div>
+
+    <!--JavaScript-->
+    <script>
+        //欢迎函数
+        function welcome() {
+            var name = document.getElementById("nameInput").value;
+            var resultArea = document.getElementById("ResultArea");
+            if (name == " ") {
+                resultArea.innerHTML = "请输入你的名字！";
+            }
+            else {
+                resultArea.innerHTML = "欢迎你，" + name + "!";
+            }
+        }
+        //变色函数
+        function changeColor() {
+            var resultArea = document.getElementById("ResultArea");
+            var currentColor = resultArea.style.color;
+
+            if (currentColor === "red") {
+                resultArea.style.color = "black";
+                resultArea.style.backgroundColor = "#e7f3fe";
+            } else {
+                resultArea.style.color = "red";
+                resultArea.style.backgroundColor = "#ffe7e7";
+            }
+        }
+        //隐藏函数
+        function hide(){
+            var resultArea=document.getElementById("ResultArea");
+            resultArea.style.display="none";
+        }
+        //显示函数
+        function show(){
+            var resultArea=document.getElementById("ResultArea");
+            resultArea.style.display="block";
+        }
+    </script>
+</body>
+
+</html>
