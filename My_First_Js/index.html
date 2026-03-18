@@ -79,7 +79,7 @@
     </div>
 
     <!--内容区-->
-    < !“博士html”。“博士html”。DOCTYPE html><div class="content">
+    <div class="content">
         <input type="text" id="nameInput" placeholder="请输入你的名字">
         <button onclick="welcome()">确认</button>
         <button onclick="changeColor()">变色</button>
@@ -93,37 +93,37 @@
     <!--JavaScript-->
     <script>
         //欢迎函数
-        function welcome() {   函数welcome() {
-            var name = document.getElementById("nameInput").value;var name   名字 = document.getElementById（“nameInput”）.value；
-            var resultArea = document.getElementById("ResultArea");var resultArea = document.getElementById("ResultArea");
-            if (name == " ") {   If (name   名字 == " ") {
-                resultArea.innerHTML = "请输入你的名字！";resultArea.innerHTML = "请输入你的名字！";
+        function welcome() {
+            var name = document.getElementById("nameInput").value;
+            var resultArea = document.getElementById("ResultArea");
+            if (name == " ") {
+                resultArea.innerHTML = "请输入你的名字！";
             }
-            else {   其他{
-                resultArea.innerHTML = "欢迎你，" + name + "!";resultArea.innerHTML = "欢迎你，"   name   "!";
+            else {
+                resultArea.innerHTML = "欢迎你，" + name + "!";
             }
         }
         //变色函数
-        function changeColor() {   函数changeColor() {
-            var resultArea = document.getElementById("ResultArea");var resultArea = document.getElementById("ResultArea");
-            var currentColor = resultArea.style.color;Var currentColor = resultArea.style   风格.color；
+        function changeColor() {
+            var resultArea = document.getElementById("ResultArea");
+            var currentColor = resultArea.style.color;
 
-            if (currentColor === "red") {if (currentColor == "red") {
-                resultArea.style.color = "black";resultArea.style   风格.color   颜色 = "black";
-                resultArea.style.backgroundColor = "#e7f3fe";resultArea.style   风格.backgroundColor = "#e7f3fe";
+            if (currentColor === "red") {
+                resultArea.style.color = "black";
+                resultArea.style.backgroundColor = "#e7f3fe";
             } else {
-                resultArea.style.color = "red";resultArea.style   风格.color   颜色 = "red";
-                resultArea.style.backgroundColor = "#ffe7e7";resultArea.style   风格.backgroundColor = "#ffe7e7";
+                resultArea.style.color = "red";
+                resultArea.style.backgroundColor = "#ffe7e7";
             }
         }
         //隐藏函数
-        function hide(){   函数隐藏(){
-            var resultArea=document.getElementById("ResultArea");var resultArea=document.getElementById("ResultArea");
+        function hide(){
+            var resultArea=document.getElementById("ResultArea");
             resultArea.style.display="none";
         }
         //显示函数
         function show(){
-            var resultArea=document.getElementById("ResultArea");var resultArea=document.getElementById("ResultArea");
+            var resultArea=document.getElementById("ResultArea");
             resultArea.style.display="block";
         }
     </script>
